@@ -1,9 +1,9 @@
 import { Livros } from "@/components/Livros";
 import { Book } from "@/types";
+import { http } from "@/utils/http";
 
 export default async function Home() {
-    const res = await fetch("https://bibliaapi.vercel.app");
-    const { data } = (await res.json()) as {
+    const { data } = (await http.getHome()) as {
         data: Book[];
     };
 
