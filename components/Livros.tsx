@@ -70,6 +70,7 @@ export function Livros({ data }: LivroProps) {
                                                 capitulos={
                                                     capitulos
                                                 }
+                                                id={id}
                                                 key={id}
                                             />
                                         );
@@ -98,6 +99,7 @@ export function Livros({ data }: LivroProps) {
                                                 capitulos={
                                                     capitulos
                                                 }
+                                                id={id}
                                                 key={id}
                                             />
                                         );
