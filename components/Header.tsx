@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function Header() {
     return (
-        <div className="p-8 flex justify-between items-center border-b border-b-[var(--secondary)]">
+        <div className="p-8 flex justify-between items-center border-b border-b-[var(--secondary)] lg:px-60">
             <Link href="/">
                 <h1 className="font-serif font-semibold text-xl">
                     Bíblia API

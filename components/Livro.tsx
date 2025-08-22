@@ -23,10 +23,10 @@ export function Livro({
     }
 
     return (
-        <div>
+        <div className="">
             <h1
                 onClick={() => setOpen(!open)}
-                className="text-xl font-semibold select-none cursor-pointer"
+                className="text-xl font-normal select-none cursor-pointer"
             >
                 {nome}
             </h1>

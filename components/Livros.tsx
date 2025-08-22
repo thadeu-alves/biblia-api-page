@@ -52,19 +52,59 @@ export function Livros({ data }: LivroProps) {
                     />
                 </div>
             </div>
-            <div className="space-y-2">
+            <div className="space-y-2 lg:flex lg:gap-8">
                 {filtered.length > 0 ? (
-                    filtered.map(
-                        ({ nome, capitulos, id }) => {
-                            return (
-                                <Livro
-                                    nome={nome}
-                                    capitulos={capitulos}
-                                    key={id}
-                                />
-                            );
-                        }
-                    )
+                    <>
+                        <div className="w-full space-y-2 ">
+                            {filtered
+                                .slice(0, 34)
+                                .map(
+                                    ({
+                                        nome,
+                                        capitulos,
+                                        id,
+                                    }) => {
+                                        return (
+                                            <Livro
+                                                nome={nome}
+                                                capitulos={
+                                                    capitulos
+                                                }
+                                                key={id}
+                                            />
+                                        );
+                                    }
+                                )}
+                        </div>
+                        <div
+                            className={`w-full space-y-2 lg:pl-8 lg:border-l border-l-[var(--secondary)] ${
+                                filtered.slice(34, 100)
+                                    .length > 0
+                                    ? ""
+                                    : "hidden"
+                            }`}
+                        >
+                            {filtered
+                                .slice(34, 100)
+                                .map(
+                                    ({
+                                        nome,
+                                        capitulos,
+                                        id,
+                                    }) => {
+                                        return (
+                                            <Livro
+                                                nome={nome}
+                                                capitulos={
+                                                    capitulos
+                                                }
+                                                key={id}
+                                            />
+                                        );
+                                    }
+                                )}
+                        </div>
+                    </>
                 ) : (
                     <h1>Livro não encontrado</h1>
                 )}

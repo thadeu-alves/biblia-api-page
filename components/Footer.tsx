@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function Footer() {
     return (
-        <div className="p-8 border-t border-t-[var(--secondary)] space-y-8">
+        <div className="p-8 border-t border-t-[var(--secondary)] space-y-8 lg:px-60">
             <div className="flex justify-between items-center ">
                 <p className="font-normal text-sm max-w-1/2">
                     <span className="font-bold text-[var(--secondary)]">
