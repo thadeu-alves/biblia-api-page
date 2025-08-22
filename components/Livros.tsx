@@ -55,9 +55,9 @@ export function Livros({ data }: LivroProps) {
             <div className="space-y-2 lg:flex lg:gap-8">
                 {filtered.length > 0 ? (
                     <>
-                        <div className="w-full space-y-2 ">
+                        <div className="w-full space-y-2 max-w-100">
                             {filtered
-                                .slice(0, 34)
+                                .slice(0, 33)
                                 .map(
                                     ({
                                         nome,
@@ -78,14 +78,14 @@ export function Livros({ data }: LivroProps) {
                         </div>
                         <div
                             className={`w-full space-y-2 lg:pl-8 lg:border-l border-l-[var(--secondary)] ${
-                                filtered.slice(34, 100)
+                                filtered.slice(33, 100)
                                     .length > 0
                                     ? ""
                                     : "hidden"
-                            }`}
+                            } max-w-100`}
                         >
                             {filtered
-                                .slice(34, 100)
+                                .slice(33, 100)
                                 .map(
                                     ({
                                         nome,
