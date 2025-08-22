@@ -23,7 +23,7 @@ export default function RootLayout({
         <html lang="en">
             <body>
                 <div
-                    className={` ${inter} bg-[var(--primary)] text-[var(--light)] flex flex-col min-h-screen
+                    className={` ${inter} bg-[var(--dark)] text-[var(--light)] flex flex-col min-h-screen
                         `}
                 >
                     <Header />
