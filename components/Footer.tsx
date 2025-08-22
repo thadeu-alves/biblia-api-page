@@ -14,7 +14,7 @@ export function Footer() {
                     da bíblia.
                 </p>
                 <div className="h-10 w-10">
-                    <Link href="/">
+                    <Link href="https://github.com/thadeu-alves/biblia-api">
                         <Image
                             src="/github.svg"
                             alt="github icon"

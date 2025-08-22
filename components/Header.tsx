@@ -10,7 +10,7 @@ export function Header() {
                 </h1>
             </Link>
             <div className="h-10 w-10">
-                <Link href="/">
+                <Link href="https://github.com/thadeu-alves/biblia-api">
                     <Image
                         src="/github.svg"
                         alt="github icon"
