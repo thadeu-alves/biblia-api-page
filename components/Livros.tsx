@@ -3,6 +3,7 @@ import { Book } from "@/types";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Livro } from "./Livro";
+import { normalizarTexto } from "@/utils/text";
 
 interface LivroProps {
     data: Book[];
@@ -16,7 +17,9 @@ export function Livros({ data }: LivroProps) {
         if (filter) {
             setFiltered(
                 data.filter((book) =>
-                    book.nome.toLowerCase().includes(filter)
+                    normalizarTexto(book.nome).includes(
+                        normalizarTexto(filter)
+                    )
                 )
             );
         } else {
