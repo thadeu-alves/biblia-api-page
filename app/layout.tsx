@@ -1,12 +1,16 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-    title: "Bible Api",
-    description: "Created by Thadeu Alves",
+    title: "Bíblia RESTful API",
+    description:
+        "Desenvolvido por Thadeu Alves, 100% gratuito e open source.",
+    icons: {
+        icon: "/favicon.svg",
+    },
 };
 
 const inter = Inter({

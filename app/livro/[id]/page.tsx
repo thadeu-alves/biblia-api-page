@@ -37,21 +37,32 @@ export default async function page({
                     {book.nome}
                 </h1>
                 <h2 className="font-serif text-8xl">
-                    {cap}
+                    {data ? cap : book.capitulos + " cap."}
                 </h2>
             </div>
             <ul className="space-y-4 lg:space-y-8">
-                {data.map((e, i) => {
-                    return (
-                        <li
-                            key={i}
-                            className="font-serif italic flex gap-4 text-xl lg:gap-8"
-                        >
-                            <span>{i + 1}</span>
-                            {e}
-                        </li>
-                    );
-                })}
+                {data ? (
+                    data.map((e, i) => {
+                        return (
+                            <li
+                                key={i}
+                                className="font-serif italic flex gap-4 text-xl lg:gap-8"
+                            >
+                                <span>{i + 1}</span>
+                                {e}
+                            </li>
+                        );
+                    })
+                ) : (
+                    <li className="text-center space-y-4">
+                        <h3 className="font-semibold text-2xl">
+                            {book.periodo}
+                        </h3>
+                        <h3 className="font-black text-4xl font-serif">
+                            {book.abrev.toUpperCase()}
+                        </h3>
+                    </li>
+                )}
             </ul>
         </div>
     );

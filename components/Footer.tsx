@@ -11,7 +11,13 @@ export function Footer() {
                     </span>{" "}
                     é uma RESTful API que fornece acesso a
                     dados de livros, capítulos e versículos
-                    da bíblia.
+                    da bíblia. Veja o repositório no{" "}
+                    <a
+                        href="https://github.com/thadeu-alves/biblia-api"
+                        className="text-[var(--secondary)] italic underline"
+                    >
+                        GitHub
+                    </a>
                 </p>
                 <div className="h-10 w-10">
                     <Link href="https://github.com/thadeu-alves/biblia-api">
@@ -26,7 +32,7 @@ export function Footer() {
             </div>
             <div>
                 <h1 className="text-center font-normal text-sm">
-                    This website was developed by{" "}
+                    Esse website foi desenvolvido por{" "}
                     <Link
                         href="https://thadeualves.vercel.app"
                         className="text-[var(--secondary)] italic"
