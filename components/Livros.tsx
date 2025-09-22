@@ -29,7 +29,7 @@ export function Livros({ data }: LivroProps) {
 
     return (
         <div className="space-y-8">
-            <div className="flex justify-between items-center">
+            <div className="flex flex-col gap-8 justify-between items-center md:flex-row">
                 <h1 className="font-semibold text-2xl font-serif">
                     Livros
                 </h1>
