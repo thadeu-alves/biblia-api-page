@@ -1,3 +1,4 @@
+import { ChapterList } from "@/components/ChapterList";
 import { http } from "@/utils/http";
 import Image from "next/image";
 import Link from "next/link";
@@ -40,9 +41,10 @@ export default async function page({
                     {data ? cap : book.capitulos + " cap."}
                 </h2>
             </div>
-            <ul className="space-y-4 lg:space-y-8">
-                {data ? (
-                    data.map((e, i) => {
+
+            {data && (
+                <ul className="space-y-4 lg:space-y-8">
+                    {data.map((e, i) => {
                         return (
                             <li
                                 key={i}
@@ -52,18 +54,16 @@ export default async function page({
                                 {e}
                             </li>
                         );
-                    })
-                ) : (
-                    <li className="text-center space-y-4">
-                        <h3 className="font-semibold text-2xl">
-                            {book.periodo}
-                        </h3>
-                        <h3 className="font-black text-4xl font-serif">
-                            {book.abrev.toUpperCase()}
-                        </h3>
-                    </li>
-                )}
-            </ul>
+                    })}
+                </ul>
+            )}
+
+            {!data && book && (
+                <ChapterList
+                    lenght={book.capitulos}
+                    bookId={id}
+                />
+            )}
         </div>
     );
 }

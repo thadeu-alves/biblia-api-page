@@ -61,24 +61,15 @@ export function Livros({ data }: LivroProps) {
                         <div className="w-full space-y-2 max-w-100">
                             {filtered
                                 .slice(0, 33)
-                                .map(
-                                    ({
-                                        nome,
-                                        capitulos,
-                                        id,
-                                    }) => {
-                                        return (
-                                            <Livro
-                                                nome={nome}
-                                                capitulos={
-                                                    capitulos
-                                                }
-                                                id={id}
-                                                key={id}
-                                            />
-                                        );
-                                    }
-                                )}
+                                .map(({ nome, id }) => {
+                                    return (
+                                        <Livro
+                                            nome={nome}
+                                            id={id}
+                                            key={id}
+                                        />
+                                    );
+                                })}
                         </div>
                         <div
                             className={`w-full space-y-2 lg:pl-8 lg:border-l border-l-[var(--secondary)] ${
@@ -90,24 +81,15 @@ export function Livros({ data }: LivroProps) {
                         >
                             {filtered
                                 .slice(33, 100)
-                                .map(
-                                    ({
-                                        nome,
-                                        capitulos,
-                                        id,
-                                    }) => {
-                                        return (
-                                            <Livro
-                                                nome={nome}
-                                                capitulos={
-                                                    capitulos
-                                                }
-                                                id={id}
-                                                key={id}
-                                            />
-                                        );
-                                    }
-                                )}
+                                .map(({ nome, id }) => {
+                                    return (
+                                        <Livro
+                                            nome={nome}
+                                            id={id}
+                                            key={id}
+                                        />
+                                    );
+                                })}
                         </div>
                     </>
                 ) : (
