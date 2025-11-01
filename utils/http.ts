@@ -1,4 +1,4 @@
-import { Book } from "@/types";
+import { Book, Chapter } from "@/types";
 
 export const http = {
     baseUrl:
@@ -17,7 +17,7 @@ export const http = {
     async getBookChapter(
         book: number,
         chap: number,
-    ): Promise<{ data: string[] }> {
+    ): Promise<{ data: Chapter }> {
         const res = await fetch(
             this.baseUrl + `/${book}/${chap}`,
         );
