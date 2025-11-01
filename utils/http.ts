@@ -1,7 +1,9 @@
 import { Book } from "@/types";
 
 export const http = {
-    baseUrl: "https://bibliaapi.vercel.app/livros",
+    baseUrl:
+        process.env.NEXT_PUBLIC_DEV_API ||
+        "https://bibliaapi.vercel.app/livros",
     async getHome() {
         const res = await fetch(this.baseUrl);
         const data = await res.json();
@@ -14,10 +16,10 @@ export const http = {
     },
     async getBookChapter(
         book: number,
-        chap: number
+        chap: number,
     ): Promise<{ data: string[] }> {
         const res = await fetch(
-            this.baseUrl + `/${book}/${chap}`
+            this.baseUrl + `/${book}/${chap}`,
         );
         const data = await res.json();
         return data;

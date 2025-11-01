@@ -18,9 +18,9 @@ export function Livros({ data }: LivroProps) {
             setFiltered(
                 data.filter((book) =>
                     normalizarTexto(book.nome).includes(
-                        normalizarTexto(filter)
-                    )
-                )
+                        normalizarTexto(filter),
+                    ),
+                ),
             );
         } else {
             setFiltered(data);
@@ -55,10 +55,10 @@ export function Livros({ data }: LivroProps) {
                     />
                 </div>
             </div>
-            <div className="space-y-2 lg:flex lg:gap-8">
+            <div className="space-y-2 lg:flex lg:gap-8 lg:justify-between">
                 {filtered.length > 0 ? (
                     <>
-                        <div className="w-full space-y-2 max-w-100">
+                        <div className="w-full space-y-2 lg:max-w-100">
                             {filtered
                                 .slice(0, 33)
                                 .map(({ nome, id }) => {
@@ -71,13 +71,14 @@ export function Livros({ data }: LivroProps) {
                                     );
                                 })}
                         </div>
+                        <div className="bg-[var(--secondary)] w-0.5 hidden lg:block"></div>
                         <div
-                            className={`w-full space-y-2 lg:pl-8 lg:border-l border-l-[var(--secondary)] ${
+                            className={`w-full space-y-2 ${
                                 filtered.slice(33, 100)
                                     .length > 0
                                     ? ""
                                     : "hidden"
-                            } max-w-100`}
+                            } lg:max-w-100`}
                         >
                             {filtered
                                 .slice(33, 100)
